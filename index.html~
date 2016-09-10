@@ -1,15 +1,13 @@
-<!DOCTYPE html>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-<head>
-    <meta charset="utf-8">
-    <title>Demo GetSelectOptionData</title>
-</head>
-<body>
-    <form name="demoForm">
-      <div>
-      <input maxlength=12 size=5 name="amount" id="amount" value="1"></input>
-      </div>
-  <select name="from" value="">
+<body style="margin-left: 6px; min-width: 0px;">
+
+<form name="values">
+<input maxlength=12 size=5 autocomplete=off value="1" id="amount">
+
+
+<select name="from" value="">
 <option  value="AUD">Australian Dollar (A$)</option>
 <option  value="BGN">Bulgarian Lev (BGN)</option>
 <option  value="BRL">Brazilian Real (R$)</option>
@@ -44,7 +42,7 @@
 <option  value="ZAR">South African Rand (ZAR)</option>
 </select>
 
-<div style="padding: 6px">to</div>
+<div style="padding: 6px 8px">to</div>
 
 <select name="to" value="">
 <option  value="AUD">Australian Dollar (A$)</option>
@@ -80,36 +78,6 @@
 <option  value="USD">US Dollar ($)</option>
 <option  value="ZAR">South African Rand (ZAR)</option>
 </select>
-    </form>
-  
-    <p id="firstP"></p>
-  
-  <button onclick="calculateRate()">Convert</button>
-
-    <script>
-      function calculateRate() {
-	//get whats in the comboboxes
-        
-        var from = demoForm.from.value;
-        var to = demoForm.to.value;
-        var amount = document.getElementById("amount").value;
-        
-        var firstP = document.getElementById('firstP');
-        firstP.innerHTML = ('From: ' + from + ' to: ' + to + '. Amount: ' + amount);
-          
-	//make dynamic API request
-	
-	//access the data that is recieved
-        var converted = amount/2;
-
-	//change the GUI to match what was recieved
-
-        firstP.innerHTML = (amount + ' ' + from + ' is ' + converted + ' ' + from);
-  }
-    </script>
-	
-</body>
-</html>
 &nbsp;
 <div id=currency_converter_result>
 <input type=submit value="Convert">
