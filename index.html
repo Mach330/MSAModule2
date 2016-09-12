@@ -5,11 +5,10 @@
     <title>Demo GetSelectOptionData</title>
 </head>
 <body>
-    <form name="demoForm">
       <div>
-      <input maxlength=12 size=5 name="amount" id="amount" value="1"></input>
+      <input maxlength=12 size=5 name="amount" id="amount" value="1" onchange="MarketRate()"></input>
       </div>
-  <select name="from" value="">
+  <select class="chosen" name="from" id="from" value="" onchange="MarketRate()">
 <option  value="AUD">Australian Dollar (A$)</option>
 <option  value="BGN">Bulgarian Lev (BGN)</option>
 <option  value="BRL">Brazilian Real (R$)</option>
@@ -46,7 +45,7 @@
 
 <div style="padding: 6px">to</div>
 
-<select name="to" value="">
+<select class="chosen" name="to" id="to" value="" onchange="MarketRate()">
 <option  value="AUD">Australian Dollar (A$)</option>
 <option  value="BGN">Bulgarian Lev (BGN)</option>
 <option  value="BRL">Brazilian Real (R$)</option>
@@ -80,42 +79,13 @@
 <option  value="USD">US Dollar ($)</option>
 <option  value="ZAR">South African Rand (ZAR)</option>
 </select>
-    </form>
   
     <p id="firstP"></p>
   
-  <button onclick="calculateRate()">Convert</button>
-
-    <script>
-      function calculateRate() {
-	//get whats in the comboboxes
-        
-        var from = demoForm.from.value;
-        var to = demoForm.to.value;
-        var amount = document.getElementById("amount").value;
-        
-        var firstP = document.getElementById('firstP');
-        firstP.innerHTML = ('From: ' + from + ' to: ' + to + '. Amount: ' + amount);
-          
-	//make dynamic API request
-	
-	//access the data that is recieved
-        var converted = amount/2;
-
-	//change the GUI to match what was recieved
-
-        firstP.innerHTML = (amount + ' ' + from + ' is ' + converted + ' ' + from);
-  }
-    </script>
-	
+  <button onclick="MarketRate()">Convert</button>
 </body>
-</html>
-&nbsp;
-<div id=currency_converter_result>
-<input type=submit value="Convert">
-</div>
-<input type=hidden name=meta value=ei&#61;Ol3SV_H6OpaO0QTw6bOQDQ>
 </form>
+
 
 <script>
   window.fbAsyncInit = function() {
@@ -136,8 +106,11 @@
 
 </script>
 <script src="./js/main.js"></script>
+<script src="./js/money.js"></script>
+<script src="./chosen_v1.6.2/chosen.jquery.min.js" type="javascript"></script>
+<script src="./chosen_v1.6.2/chosen.css"></script>
 
-<button onclick="myFacebookLogin()">Post to Facebook</button>
+<button onclick="facebookLogin()">Post to Facebook</button>
 
 <div id="status">
 </div>
