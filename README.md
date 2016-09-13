@@ -10,5 +10,4 @@ Chosen-
 Tubular-
 	a JQuery plugin that plays a youtube video in the background. The video chosen was chosen because it fit thematically for the web app. The intent of including this was to demonstrate use of JQuery plugins, and all rights to the video go to their respective owners. 
 
-The web app has continuous deployment via github, thanks to publishing on Azure. 
-
+The web app has continuous deployment via github, thanks to publishing on Azure. It can be viewed at http://simplecurrencyconverter.azurewebsites.net/
