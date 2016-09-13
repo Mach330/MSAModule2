@@ -34,5 +34,9 @@ function MarketRate() {
 
 $( document ).ready(function(){
     $(".chosen").chosen();
-    $('section :input').val('').fancyInput()[0].focus();
+	
+	var options = { videoId: 'e4Is32W-ppk', start: 3 };
+	$('#wrapper').tubular(options);
+	// f-UGhWj1xww cool sepia hd
+	// 49SKbS7Xwf4 beautiful barn sepia
 })
