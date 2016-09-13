@@ -3,10 +3,9 @@
 function facebookLogin() {
     FB.login(function () {
         // Note: The call will only work if you accept the permission request
-        FB.api('/me/feed', 'post', { message: 'Hello, world!' });
+        FB.api('/me/feed', 'post', { message: '' + exchange });
     }, { scope: 'publish_actions' });
 }
-
 function MarketRate() {
     var from = document.getElementById("from").value;
     var URLandBase = "http://api.fixer.io/latest?base=" + from;
@@ -32,15 +31,10 @@ function MarketRate() {
     xhr.send();
 }
 ;
-
-$( document ).ready(function(){
-	
+$(document).ready(function () {
     $(".chosen").chosen();
-
-	var options = { videoId: '49SKbS7Xwf4', start: 3 };
-	$('#wrapper').tubular(options);
-	// f-UGhWj1xww cool sepia hd
-	// 49SKbS7Xwf4 beautiful barn sepia
-
-})
-
+    var options = { videoId: '980K3rtMxas', start: 0 };
+    $('#wrapper').tubular(options);
+    // f-UGhWj1xww cool sepia hd
+    // 49SKbS7Xwf4 beautiful barn sepia
+});

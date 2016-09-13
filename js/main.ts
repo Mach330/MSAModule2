@@ -1,12 +1,15 @@
 /// <reference path="X:\MSA module 2\typings\index.d.ts" />
-declare var FB:any;
-declare var exchange:number;
+declare var FB: any;
+
+declare var exchange: number;
+
+declare var result: number;
 
 // Only works after `FB.init` is called
 function facebookLogin() {
     FB.login(function(){
   // Note: The call will only work if you accept the permission request
-  FB.api('/me/feed', 'post', {message: 'Hello, world!'});
+  FB.api('/me/feed', 'post', {message: '' + exchange});
 }, {scope: 'publish_actions'});
 }
   
@@ -41,3 +44,15 @@ function MarketRate() {
 
     xhr.send();
 };
+
+
+$( document ).ready(function(){
+	
+    (<any>$(".chosen")).chosen();
+
+	var options = { videoId: '980K3rtMxas', start: 0 };
+	(<any>$('#wrapper')).tubular(options);
+	// f-UGhWj1xww cool sepia hd
+	// 49SKbS7Xwf4 beautiful barn sepia
+
+})
