@@ -32,7 +32,7 @@ function MarketRate() {
 }
 ;
 
-
-$(function(){
+$( document ).ready(function(){
     $(".chosen").chosen();
-});
+    $('section :input').val('').fancyInput()[0].focus();
+})

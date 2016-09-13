@@ -3,12 +3,21 @@
 <head>
     <meta charset="utf-8">
     <title>Demo GetSelectOptionData</title>
+
+<script src="./chosen/jquery.min.js"></script>
+<script type='text/javascript' src='./chosen/chosen.jquery.min.js'></script>
+<link rel="stylesheet" type="text/css" href="./fancyInput/fancyInput.css" />
+<link rel="stylesheet" type="text/css" href="./fancyInput/styles.css" />
+<link rel="stylesheet" type="text/css" href="./chosen/chosen.min.css" />
+
 </head>
 <body>
-      <div>
-      <input maxlength=12 size=5 name="amount" id="amount" value="1" onchange="MarketRate()"></input>
-      </div>
-  <select class="chosen" name="from" id="from" value="" onchange="MarketRate()">
+			<section class='input'>
+        <div>
+          <input maxlength=12 size=5 name="amount" id="amount" value="1" onchange="MarketRate()"></input>
+        </div>
+      </section>
+  <select class="chosen" name="from" id="from" value="" onchange="MarketRate()" style="width:200px;">
 <option  value="AUD">Australian Dollar (A$)</option>
 <option  value="BGN">Bulgarian Lev (BGN)</option>
 <option  value="BRL">Brazilian Real (R$)</option>
@@ -45,7 +54,7 @@
 
 <div style="padding: 6px">to</div>
 
-<select class="chosen" name="to" id="to" value="" onchange="MarketRate()">
+<select class="chosen" name="to" id="to" value="" onchange="MarketRate()" style="width:200px;">
 <option  value="AUD">Australian Dollar (A$)</option>
 <option  value="BGN">Bulgarian Lev (BGN)</option>
 <option  value="BRL">Brazilian Real (R$)</option>
@@ -87,6 +96,7 @@
 </form>
 
 
+<script type='text/javascript' src='./fancyInput/fancyInput.js'></script>
 <script>
   window.fbAsyncInit = function() {
     FB.init({
@@ -107,13 +117,8 @@
 </script>
 <script src="./js/main.js"></script>
 <script src="./js/money.js"></script>
-<script src="./chosen_v1.6.2/chosen.jquery.min.js" type="javascript"></script>
-<script src="./chosen_v1.6.2/chosen.css"></script>
 
 <button onclick="facebookLogin()">Post to Facebook</button>
-
-<div id="status">
-</div>
 
 </body>
 </div>
