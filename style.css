@@ -30,23 +30,3 @@ li{
     li a:hover {
       background-color: #111111;   
      }
-
-#boxModel{
-    background-color: darkgray;
-    height: 200px;
-    width: 150px;
-    border: 10px solid black;
-    padding: 25px;
-    margin: 25px;
-    display: inline-block;
-    align-self: top;
-}
-
-.source, .destination{
-    display: inline;
-    clear: none;
-}
-
-.Converter{
-    align-items: center;
-}

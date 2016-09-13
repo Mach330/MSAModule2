@@ -1,15 +1,17 @@
 /// <reference path="X:\MSA module 2\typings\index.d.ts" />
 declare var FB: any;
 
+declare var from: string;
+declare var to: string;
 declare var exchange: number;
-
 declare var result: number;
+declare var display: string;
 
 // Only works after `FB.init` is called
 function facebookLogin() {
     FB.login(function(){
   // Note: The call will only work if you accept the permission request
-  FB.api('/me/feed', 'post', {message: '' + exchange});
+  FB.api('/me/feed', 'post', {message: '' + display});
 }, {scope: 'publish_actions'});
 }
   
@@ -35,7 +37,9 @@ function MarketRate() {
         }
 
         //Drill down
-        document.getElementById('firstP').innerHTML = ("" + Math.round((exchange * amount * 100))/100);
+        result = Math.round((exchange * amount * 100))/100;
+        display = amount + " " + from + " is equal to: " + result + " " + to;
+        document.getElementById('firstP').innerHTML = (display);
     };
 
     xhr.onerror = function () {
@@ -47,7 +51,7 @@ function MarketRate() {
 
 
 $( document ).ready(function(){
-	
+    
     (<any>$(".chosen")).chosen();
 
 	var options = { videoId: '980K3rtMxas', start: 0 };
