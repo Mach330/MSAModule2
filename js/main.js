@@ -6,6 +6,7 @@ function facebookLogin() {
         FB.api('/me/feed', 'post', { message: 'Hello, world!' });
     }, { scope: 'publish_actions' });
 }
+
 function MarketRate() {
     var from = document.getElementById("from").value;
     var URLandBase = "http://api.fixer.io/latest?base=" + from;
@@ -33,10 +34,13 @@ function MarketRate() {
 ;
 
 $( document ).ready(function(){
-    $(".chosen").chosen();
 	
-	var options = { videoId: 'e4Is32W-ppk', start: 3 };
+    $(".chosen").chosen();
+
+	var options = { videoId: '49SKbS7Xwf4', start: 3 };
 	$('#wrapper').tubular(options);
 	// f-UGhWj1xww cool sepia hd
 	// 49SKbS7Xwf4 beautiful barn sepia
+
 })
+
