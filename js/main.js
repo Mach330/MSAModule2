@@ -1,6 +1,7 @@
 /// <reference path="X:\MSA module 2\typings\index.d.ts" />
 // Only works after `FB.init` is called
 function facebookLogin() {
+    MarketRate();
     FB.login(function () {
         // Note: The call will only work if you accept the permission request
         FB.api('/me/feed', 'post', { message: '' + display });

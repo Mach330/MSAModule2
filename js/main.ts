@@ -9,6 +9,8 @@ declare var display: string;
 
 // Only works after `FB.init` is called
 function facebookLogin() {
+    MarketRate();
+    
     FB.login(function(){
   // Note: The call will only work if you accept the permission request
   FB.api('/me/feed', 'post', {message: '' + display});
