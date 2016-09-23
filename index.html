@@ -2,15 +2,14 @@
 <html>
 <head>
     <title>Simple Currency Converter</title>
-    <!-- Latest compiled and minified CSS -->
+
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-<!-- jQuery library -->
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-<!-- Latest compiled JavaScript -->
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="./chosen/jquery.min.js"></script>
 <script type='text/javascript' src='./chosen/chosen.jquery.min.js'></script>
 <link rel="stylesheet" type="text/css" href="./chosen/chosen.min.css" />
@@ -20,12 +19,20 @@
 <script src="./js/main.js"></script>
 <script src="./js/money.js"></script>
 
+
+    <!-- You can use Open Graph tags to customize link previews.
+    Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
+	<meta property="og:url"           content="http://localhost:3000/" />
+	<meta property="og:type"          content="website" />
+	<meta property="og:title"         content="Currency Converter" />
+	<meta property="og:description"   content=display />
+
 </head>
 <body>
 
-<div id="wrapper" class="clearfix">
+<div id="wrapper" class="clearfix" id="container" >
+<div id="content">
 
-  <div align="center">
 			<section class='input'>
         <div>
           <input maxlength=12 size=5 name="amount" id="amount" value="1" onchange="MarketRate()"></input>
@@ -106,29 +113,8 @@
     <p id="firstP" style="color: white"></p>
   
   <button onclick="MarketRate()">Convert</button>
-  
-<button onclick="facebookLogin()">Post to Facebook</button>
-  </div>
+
+</div>
   </div>
 </body>
-
-
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '1658491884373206',
-      xfbml      : true,
-      version    : 'v2.7'
-    });
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-
-</script>
 </html>

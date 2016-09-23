@@ -30,3 +30,14 @@ li{
     li a:hover {
       background-color: #111111;   
      }
+
+#container{
+  width:auto;
+  height: auto;
+}
+
+#content{
+width:90%;
+height:90%;
+margin:auto;
+}
